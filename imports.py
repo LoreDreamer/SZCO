@@ -14,7 +14,7 @@ def main():
     gamma = 2.50
     eta = 1.00
     lambda_max = 1.0
-    storm_phases = 30000000
+    storm_phases = 30000
     r_min_factor = 0.05
 
     # Cada benchmark usa sus propios límites reales.

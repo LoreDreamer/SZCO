@@ -15,9 +15,9 @@ $$
 
 Donde:
 
-- **Zi:** Posición normalizada del jugador dentro de `[0,1]^d`.
-- **Fi:** Valor obtenido al evaluar la función objetivo.
-- **d:** Dimensión del problema de optimización.
+- **$Z_i$:** Posición normalizada del jugador dentro de `[0,1]^d`.
+- **$F_i$:** Valor obtenido al evaluar la función objetivo.
+- **$d$:** Dimensión del problema de optimización.
 
 Durante la inicialización, los jugadores se generan en el dominio real del problema y sus posiciones se transforman al dominio normalizado mediante **min-max scaling**.
 
@@ -69,7 +69,7 @@ Una posición de peor fitness puede aceptarse si:
 - Permanece dentro de la zona segura.
 - Su acercamiento al centro compensa suficientemente la pérdida de calidad.
 
-La influencia de la seguridad está controlada por **lambda(t)**, que aumenta con el progreso de la ejecución.
+La influencia de la seguridad está controlada por $\lambda(t)$, que aumenta con el progreso de la ejecución.
 
 De esta forma, los jugadores priorizan gradualmente la supervivencia conforme se contrae la zona.
 
@@ -137,19 +137,19 @@ El algoritmo devuelve un diccionario con la siguiente información:
 
 | Parámetro | Descripción | Efecto |
 |---|---|---|
-| **Alpha** | Intensidad inicial de exploración aleatoria | Un valor mayor genera movimientos exploratorios más amplios |
-| **Beta** | Atracción hacia el mejor histórico | Un valor mayor acerca más rápidamente los jugadores al centro |
-| **Gamma** | Forma y velocidad de contracción del radio | Un valor mayor hace que la zona se vuelva pequeña más rápidamente |
-| **Eta** | Coeficiente de reducción poblacional | Un valor mayor reduce la cantidad de jugadores más rápidamente |
-| **Lambda** | Coeficiente de calidad y seguridad | Un valor mayor permite sacrificar más fitness para acercarse al centro |
-| **Epsilon** | Protección contra divisiones por cero | Constante numérica, no es un parámetro de búsqueda |
+| **$\alpha$** | Intensidad inicial de exploración aleatoria | Un valor mayor genera movimientos exploratorios más amplios |
+| **$\beta$** | Atracción hacia el mejor histórico | Un valor mayor acerca más rápidamente los jugadores al centro |
+| **$\gamma$** | Forma y velocidad de contracción del radio | Un valor mayor hace que la zona se vuelva pequeña más rápidamente |
+| **$\eta$** | Coeficiente de reducción poblacional | Un valor mayor reduce la cantidad de jugadores más rápidamente |
+| **$\lambda$** | Coeficiente de calidad y seguridad | Un valor mayor permite sacrificar más fitness para acercarse al centro |
+| **$\epsilon$** | Protección contra divisiones por cero | Constante numérica, no es un parámetro de búsqueda |
 
 ### 9.2. Configuración de la tormenta
 
 | Parámetro | Descripción |
 |---|---|
 | **Storm Phases** | Cantidad de fases o cierres discretos de la tormenta. Menos fases producen cierres más grandes; más fases producen cierres menores |
-| **R Min Factor** | Factor utilizado para calcular el radio mínimo. Un valor menor produce una zona final más pequeña y peligrosa |
+| **rMin Factor** | Factor utilizado para calcular el radio mínimo. Un valor menor produce una zona final más pequeña y peligrosa |
 
 ### 9.3. Configuración de la población y del problema
 
@@ -170,12 +170,12 @@ Estas variables se calculan automáticamente durante la ejecución.
 |---|---|
 | **Progress** | Progreso general de la ejecución entre 0 y 1, calculado a partir de la iteración actual |
 | **Storm Progress** | Progreso discretizado de la tormenta, que determina cuándo cambia el radio |
-| **R0** | Radio inicial de la zona segura, calculado como la raíz cuadrada de la dimensión |
-| **R Min** | Radio mínimo, calculado multiplicando R Min Factor por R0 |
-| **Radius T** | Radio actual, dependiente de R0, R Min, Gamma y Storm Progress |
-| **Alpha T** | Intensidad de exploración actual, que disminuye progresivamente hasta cero |
-| **Beta T** | Intensidad de explotación actual, que aumenta hasta Beta Max |
-| **Lambda T** | Importancia actual de la seguridad, que aumenta hasta Lambda Max |
+| **$R_0$** | Radio inicial de la zona segura, calculado como la raíz cuadrada de la dimensión |
+| **$R_{\min}$** | Radio mínimo, calculado multiplicando R Min Factor por R0 |
+| **$R_t$** | Radio actual, dependiente de R0, R Min, Gamma y Storm Progress |
+| **$\alpha_t$** | Intensidad de exploración actual, que disminuye progresivamente hasta cero |
+| **$\beta_t$** | Intensidad de explotación actual, que aumenta hasta Beta Max |
+| **$\lambda_t$** | Importancia actual de la seguridad, que aumenta hasta Lambda Max |
 | **Target Population Size** | Población máxima permitida en una ronda, dependiente de la población inicial, el progreso y Eta |
 | **Maximum Storm Deaths** | Máximo de jugadores que puede eliminar la tormenta sin reducir la población por debajo del objetivo |
 
@@ -186,7 +186,7 @@ Estas variables se calculan automáticamente durante la ejecución.
 | **Current Risk** | Riesgo actual de un jugador según su distancia al centro |
 | **Candidate Risk** | Riesgo de la posición candidata según su distancia al centro |
 | **Quality Change** | Cambio relativo entre el fitness actual y el candidato |
-| **Delta Risk** | Diferencia entre el riesgo candidato y el riesgo actual |
+| **$\Delta Risk$** | Diferencia entre el riesgo candidato y el riesgo actual |
 | **Safety Score** | Combinación del cambio de calidad y del cambio de riesgo, que determina si una posición peor puede aceptarse por ser más segura |
 
 ---
