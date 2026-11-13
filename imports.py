@@ -5,17 +5,19 @@ from szco import szcoAlgorithm, sphere, rastrigin, rosenbrock
 
 def main():
     # ============ PARÁMETROS EDITABLES ============
-    dimension = 2
-    max_iterations = 100
+    dimension = 30
+    max_iterations = 500
     population_size = 100
     seed = 42
-    alpha0 = 0.20
+
+    alpha0 = 0.04
     beta_max = 0.80
     gamma = 2.50
     eta = 1.00
-    lambda_max = 1.0
+    lambda_max = 1.00
+
     storm_phases = 300
-    r_min_factor = 0.05
+    r_min_factor = 0.01
 
     # Cada benchmark usa sus propios límites reales.
     pruebas = [
