@@ -10,5 +10,3 @@ __pycache__/
 
 # VS Code local settings (optional)
 .vscode/
-
-*.txt
