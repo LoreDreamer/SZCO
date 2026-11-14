@@ -89,8 +89,6 @@ Para cada función se muestran en la terminal el mejor fitness, la mejor posici�
 deactivate
 ```
 
-**Nota:** `.venv/` ya está excluido del control de versiones mediante `.gitignore`. No es necesario subir el entorno virtual a GitHub. Un archivo `.env` de variables de entorno **no es necesario** para la ejecución actual del proyecto.
-
 ## Estructura del repositorio
 
 ```text
