@@ -343,6 +343,4 @@ La función `szcoAlgorithm(...)` devuelve un diccionario con la siguiente inform
 
 ## 10. Estado del proyecto
 
-La configuración actual constituye una **versión experimental de SZCO**. Sus parámetros deben evaluarse y calibrarse antes de obtener conclusiones sobre su rendimiento frente a otras metaheurísticas.
-
-La evaluación presentada en el informe final es preliminar: contempla una ejecución independiente de cada benchmark en 30 dimensiones. Como trabajo futuro se consideran múltiples semillas, diferentes dimensionalidades y comparaciones bajo presupuestos de evaluación equivalentes.
+La configuración actual constituye una **versión experimental de SZCO**. Si bien los parámetros tal vez no sean los mejores, se sugiere seguir experimentando y considerar posibles adiciones para lidiar con las limitaciones enfrentadas descritas en el informe final.
