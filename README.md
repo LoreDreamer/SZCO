@@ -195,7 +195,7 @@ $$T_i(t)=\beta(t)(Z_{best}-Z_i(t)),\quad \beta(t)=\beta_{max}p_t^2$$
 
 Las posiciones candidatas se proyectan sobre $[0,1]^d$ para impedir que salgan del mapa normalizado:
 
-$$Z_i^{cand}=\operatorname{clip}(Z_i+L_i+T_i,0,1)$$
+$$Z_i^{cand}=\mathrm{clip}(Z_i+L_i+T_i,0,1)$$
 
 Posteriormente, se transforman al dominio real y se evalúan mediante la función objetivo.
 
